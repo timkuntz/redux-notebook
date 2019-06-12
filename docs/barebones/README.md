@@ -32,7 +32,7 @@ function createStore(reducer) {
 
 Using code from the [Vanilla Counter](https://raw.githubusercontent.com/reduxjs/redux/master/examples/counter-vanilla/index.html) Redux example, basic usage is as follows:
 
-* create a reducer that takes current state and an action to perform on that state
+Create a reducer that takes current state and an action to perform on that state.
 ```javascript
 function reducer(state, action) {
   switch (action.type) {
@@ -46,17 +46,17 @@ function reducer(state, action) {
 }
 ```
 
-* create a store to hold your state, passing in the reducer
+Create a store to hold your state, passing in the reducer.
 ```javascript
 var store = createStore(counter)
 ```
 
-* dispatch actions to modify your state
+Dispatch actions to modify your state.
 ```javascript
 store.dispatch({ type: 'INCREMENT' })
 ```
 
-* subscribe to changes to render updates
+Subscribe to changes to render updates.
 ```javascript
 function render() {
   valueEl.innerHTML = store.getState().toString()
@@ -64,7 +64,7 @@ function render() {
 store.subscribe(render)
 ```
 
-* unsubscribe if handler may no longer be needed
+Unsubscribe if handler may no longer be needed.
 ```javascript
 unsubscribe = store.subscribe(render)
 function componentWillUnmount() {
